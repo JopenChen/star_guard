@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package blockchain;
+
+option go_package = "./blockchain";
+
+message CreateDataRequest {
+  bytes fileStream = 1;
+}
+
+message CreateDataResponse {
+  string msg = 1;
+  string cid = 2;
+}
+
+message RetrieveRequest {
+  string cid = 1;
+}
+
+message RetrieveResponse {
+  string msg = 1;
+  bytes fileSteam = 2;
+}
+
+service Blockchain {
+  rpc Create(CreateDataRequest) returns (CreateDataResponse);
+  rpc Retrieve(RetrieveRequest) returns (RetrieveResponse);
+}

@@ -1,0 +1,12 @@
+Name: blockchainservice.rpc
+ListenOn: 0.0.0.0:8081
+Timeout: 100000
+Etcd:
+  Hosts:
+  - 127.0.0.1:2379
+  Key: blockchainservice.rpc
+
+Chains:
+  Type: w3s
+  Web3StorageConfig:
+    Token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDFkRjhmQmNDMDI2ZkI2MjEzMzYzZGE3NDk5OWM0NUUyMzMxODMwMjkiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NzkyMzcxNzQ1NDksIm5hbWUiOiJkZXYifQ.rQ_pJWQ61ffVPmvRpOK2gbOU_Z6jY9ygSiObZAcfEwM"
